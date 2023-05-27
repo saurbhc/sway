@@ -1,10 +1,13 @@
 [tool.poetry]
-name = "pymonorepo"
+name = "sway"
 version = "0.1.0"
 description = "managing micro-repos for monorepos"
 authors = ["Saurabh Chopra <sc@saurabhchopra.co.uk>"]
 license = "MIT"
 readme = "README.md"
+
+[tool.poetry.scripts]
+sway = "sway.main:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"
