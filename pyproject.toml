@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sway"
-version = "0.1.0"
+version = "0.1.2"
 description = "managing micro-repos for monorepos"
 authors = ["Saurabh Chopra <sc@saurabhchopra.co.uk>"]
 license = "MIT"
@@ -11,6 +11,7 @@ sway = "sway.main:main"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pyyaml = "^6.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.3.2"
