@@ -1,0 +1,9 @@
+repos:
+-   id: sway
+    repo: git@github.com:saurbhc/sway
+    path: .
+    envs:
+    -   env: dev
+        branch: dev
+    -   env: prod
+        branch: main
