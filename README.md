@@ -20,7 +20,16 @@ $ sway config init
 $ sway config validate
 ```
 
+### Branch Management
+
+Triggers `git checkout <branch in 'dev' env>`
+
+```console
+$ sway branch -e dev
+```
+
+Multiple envs can be setup in `.sway-config.yaml`
+
 ---
 
 _More Coming Soon..._
-
