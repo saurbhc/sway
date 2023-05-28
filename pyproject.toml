@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sway"
-version = "0.1.2"
+version = "0.1.3"
 description = "managing micro-repos for monorepos"
 authors = ["Saurabh Chopra <sc@saurabhchopra.co.uk>"]
 license = "MIT"
