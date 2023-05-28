@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 
 from sway.commands.branch import branch_cmd
-from sway.commands.config import get_config_object, config_init, config_validate
+from sway.commands.config import config_init, config_validate, get_config_object
 
 
 def main() -> int:
@@ -13,7 +13,7 @@ def main() -> int:
     subparsers = parser.add_subparsers(dest="command")
     config_parser = subparsers.add_parser(
         "config",
-        help=".pymonorepo-config.yaml options",
+        help=".sway-config.yaml options",
     )
     branch_parser = subparsers.add_parser(
         "branch",
@@ -43,12 +43,13 @@ def main() -> int:
         nargs="*",
         action="append",
         metavar=("repo_id", "repo_branch"),
-        help="use repo-id with provided branch, use --repo/-r {repo-id} {repo-branch}",
+        help="use '--repo/-r {repo-id} {repo-branch}'",
     )
     branch_parser.add_argument(
         "--environment",
-        "-E",
-        help="Project env setup in .sway-config.yaml",
+        "-e",
+        required=True,
+        help="env setup provided in .sway-config.yaml",
     )
 
     args = parser.parse_args()
@@ -57,7 +58,7 @@ def main() -> int:
         return config_init(args=args)
 
     if args.command == "config" and args.action == "validate":
-        return config_validate(args=args)
+        return config_validate()
 
     config = get_config_object()
 
@@ -69,4 +70,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

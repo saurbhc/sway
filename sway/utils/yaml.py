@@ -41,4 +41,3 @@ def set_config(data: Any) -> None:
 
 def touch_config() -> None:
     DEFAULT_CONFIG_FILE_PATH.touch(mode=0o600, exist_ok=True)
-
