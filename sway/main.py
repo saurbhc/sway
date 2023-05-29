@@ -4,10 +4,19 @@ import argparse
 
 from sway.commands.branch import branch_cmd
 from sway.commands.config import config_init, config_validate, get_config_object
+from sway.utils.config import VERSION
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(prog="sway")
+
+    # https://stackoverflow.com/a/8521644/812183
+    parser.add_argument(
+        "-V",
+        "--version",
+        action="version",
+        version=f"%(prog)s {VERSION}",
+    )
 
     # subparsers
     subparsers = parser.add_subparsers(dest="command")
