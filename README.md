@@ -34,6 +34,14 @@ $ sway config validate
 
 For example config, see `.sway-config.yml`
 
+### Version
+
+see sway version
+
+```console
+$ sway --version
+```
+
 ---
 
 _More Coming Soon..._
