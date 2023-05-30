@@ -1,6 +1,9 @@
 <div align="center">
-  <h2><strong>Sway:</strong> An Experimental Monorepo Management Solution for Python</h2>
+  <img width="100" alt="sway logo" src="https://github.com/saurbhc/sway/assets/60221720/9aa46ba3-0e92-4c84-adc8-c60f8f050621">
+  <p><strong>Sway:</strong> An Experimental Monorepo Management Solution for Python</p>
 </div>
+
+---
 
 ## Installation
 
