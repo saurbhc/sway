@@ -21,6 +21,22 @@ $ sway branch -e dev
 
 Multiple envs can be setup in `.sway-config.yaml`
 
+### Build Management
+
+Builds package - via poetry
+
+Builds repositories in `.sway-config.yaml`
+
+```console
+$ sway build poetry
+```
+
+Copy the `*.whl` file just built to the current dir
+
+```console
+$ sway build poetry --copy .
+```
+
 ### Config
 
 config creation interactively
