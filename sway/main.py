@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 
 from sway.commands.branch import branch_cmd
+from sway.commands.build import build_poetry
 from sway.commands.config import config_init, config_validate, get_config_object
 from sway.utils.config import VERSION
 
@@ -61,6 +62,28 @@ def main() -> int:
         help="env setup provided in .sway-config.yaml",
     )
 
+    # build subparsers
+    build_subparsers = build_parser.add_subparsers(dest="tool")
+    build_poetry_subparser = build_subparsers.add_parser(
+        "poetry",
+        help="build via poetry",
+    )
+
+    # build poetry subparser commands
+    build_poetry_subparser.add_argument(
+        "--copy",
+        help="copy .whl file to <path>, use '--copy <path>'",
+    )
+    build_poetry_subparser.add_argument(
+        "--repo",
+        "-r",
+        type=str,
+        nargs="*",
+        action="append",
+        metavar=("repo_id",),
+        help="use '--repo/-r {repo-id}'",
+    )
+
     args = parser.parse_args()
 
     if args.command == "config" and args.action == "init":
@@ -73,6 +96,9 @@ def main() -> int:
 
     if args.command == "branch":
         return branch_cmd(args=args, config=config)
+
+    if args.command == "build" and args.tool == "poetry":
+        return build_poetry(args=args, config=config)
 
     return 1
 
