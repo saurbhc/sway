@@ -14,7 +14,7 @@ repos:
         args: [--pytest-test-first]
         # verifies that test files are named correctly. ensure tests match .*_test\.py
 -   repo: https://github.com/asottile/add-trailing-comma
-    rev: v3.0.1
+    rev: v3.1.0
     hooks:
     -   id: add-trailing-comma
         # A tool (and pre-commit hook) to automatically add trailing commas to calls and literals.
@@ -32,11 +32,11 @@ repos:
     -   id: isort
         name: isort (python)
 -   repo: https://github.com/psf/black
-    rev: 23.7.0
+    rev: 23.9.1
     hooks:
     -   id: black
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.4.1
+    rev: v1.5.1
     hooks:
     -   id: mypy
         additional_dependencies: [types-all]
