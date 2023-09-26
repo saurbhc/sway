@@ -20,7 +20,7 @@ repos:
         # A tool (and pre-commit hook) to automatically add trailing commas to calls and literals.
         args: [--py36-plus]
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v3.11.0
+    rev: v3.13.0
     hooks:
     -   id: pyupgrade
         # A tool (and pre-commit hook) to automatically upgrade syntax for newer versions of the language.
