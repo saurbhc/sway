@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.5.0
     hooks:
     -   id: trailing-whitespace
         # Trims trailing whitespace.
@@ -20,7 +20,7 @@ repos:
         # A tool (and pre-commit hook) to automatically add trailing commas to calls and literals.
         args: [--py36-plus]
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v3.14.0
+    rev: v3.15.0
     hooks:
     -   id: pyupgrade
         # A tool (and pre-commit hook) to automatically upgrade syntax for newer versions of the language.
