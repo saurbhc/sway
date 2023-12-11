@@ -27,7 +27,7 @@ repos:
         args: [--py38-plus]
         # Mirror of autopep8 package for pre-commit.
 -   repo: https://github.com/pycqa/isort
-    rev: 5.12.0
+    rev: 5.13.0
     hooks:
     -   id: isort
         name: isort (python)
